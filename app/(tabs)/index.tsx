@@ -1,13 +1,14 @@
+import ImageViewer from "@/components/ImageViewer";
 import Link from "expo-router/link";
-import { Image, StyleSheet, Text, View } from "react-native";
-
+import { StyleSheet, Text, View } from "react-native";
 const PlaceholderImage = require("../../assets/images/icon.png");
 
 export default function Index() {
   return (
-    <View
-      style={styles.container}>
-      <Image source={PlaceholderImage} style={styles.image} />  
+    <View style={styles.container}>
+      <View style={styles.imageContainer}>
+        <ImageViewer imageSource={PlaceholderImage} />  
+      </View>
       <Text style={styles.text}>Welcome to PouchApp.</Text>
       <Text style={styles.text}>This is the home screen.</Text>
       <Text style={styles.text}>You can navigate to other screens using the links below:</Text>
@@ -40,11 +41,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     textDecorationLine: "underline",
   },
-  image: {
-    width: 100,
-    height: 100,
-    marginBottom: 70,
-    backgroundColor: "#25292e",
-    borderRadius: 20,
-  },
+  imageContainer: {
+    flex: .7
+  }
 })
