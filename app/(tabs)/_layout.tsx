@@ -1,0 +1,12 @@
+import { Tabs } from "expo-router";
+
+export default function TabsLayout() {
+  return (
+    <Tabs>
+      <Tabs.Screen name="index" 
+        options={{headerTitle: "SmashScreen",}}/>
+      <Tabs.Screen name="about" 
+        options={{headerTitle: "About Screen",}}/>
+    </Tabs>   
+  );
+}
