@@ -1,12 +1,12 @@
 import { Stack } from "expo-router";
 
-export default function TabsLayout() {
+export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" 
-        options={{headerTitle: "SmashScreen",
-          headerLeft: () => null,        
-        }}/>
+        options={{headerShown: false,}}
+    />
+    <Stack.Screen name="+not-found" options={{}} />      
     </Stack>   
   );
 }
