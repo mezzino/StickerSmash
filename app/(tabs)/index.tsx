@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import ImageViewer from "@/components/ImageViewer";
 import Link from "expo-router/link";
 import { StyleSheet, Text, View } from "react-native";
@@ -8,6 +9,9 @@ export default function Index() {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer imageSource={PlaceholderImage} />  
+      </View>
+      <View>
+        <Button label="Press me" /> 
       </View>
       <Text style={styles.text}>Welcome to PouchApp.</Text>
       <Text style={styles.text}>This is the home screen.</Text>
@@ -36,12 +40,17 @@ const styles = StyleSheet.create({
   spacer:{
     fontSize: 2,
   },
+  bigspacer:{
+    marginTop: 200,
+    fontSize: 34,
+  },
   button: {
+    marginTop: 50,
     fontSize: 20,
     color: "#fff",
     textDecorationLine: "underline",
   },
   imageContainer: {
-    flex: .7
+    flex: .1,
   }
 })

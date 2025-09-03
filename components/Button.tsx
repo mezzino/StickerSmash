@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable} from "react-native"
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 type props ={
     label: string;
@@ -6,12 +6,10 @@ type props ={
 
 export default function Button({label}: props) {
     return (
-        <View style={styles:buttonContainer}>
-        <Pressable
-          style={styles:button}
-          onPress={() => alert ("Pressed")
-        }>
-          <Text style={styles:buttonLabel}>{label}</Text>
+        <View style={styles.buttonContainer}>
+        <Pressable 
+            onPress={() => alert ("Pressed")}>
+          <Text style={styles.buttonLabel}>{label}</Text>
         </Pressable>    
         </View>
     );
@@ -36,15 +34,15 @@ export default function Button({label}: props) {
         color: "#fff",
         textDecorationLine: "underline",
       },
-      image: {
-        width: 200,
-        height: 200,
-        marginBottom: 70,
-        borderRadius: 20,
-      },
       buttonLabel: {
+        fontSize: 20,
+        color: "#fff",
+        textAlign: "center",
+        backgroundColor: "#3b82f6",
+        padding: 10,
+        borderRadius: 5,  
       },
       buttonContainer: {
-        flex: .7,
+        flex: .3,
       },
   })
